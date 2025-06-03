@@ -8,14 +8,13 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     steps:
     - name: Checkout repository
       uses: actions/checkout@v3
 
-    - name: Install dependencies
+    - name: Install dependencies and build gtest
       run: |
         sudo apt update
         sudo apt install -y build-essential cmake libgtest-dev
