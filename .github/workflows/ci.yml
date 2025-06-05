@@ -17,7 +17,7 @@ jobs:
     - name: Install dependencies and build gtest
       run: |
         sudo apt update
-        sudo apt install -y build-essential cmake libgtest-dev
+        sudo apt install -y build-essential cmake libgtest-dev g++
         sudo cmake -S /usr/src/googletest -B /usr/src/googletest/build
         sudo cmake --build /usr/src/googletest/build
         sudo cp /usr/src/googletest/build/lib/*.a /usr/lib/
