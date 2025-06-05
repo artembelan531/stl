@@ -9,7 +9,7 @@ $(EXECUTABLE): tests.o
 	$(CXX) $(CXXFLAGS) tests.o -o $(EXECUTABLE) $(GTEST_LIBS)
 
 %.o: %.cpp
-	$(CXX) $(CXXFLAGS) -Iinclude -c $< -o $@
+	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 clean:
 	rm -f *.o
